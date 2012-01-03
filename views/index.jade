@@ -1,0 +1,26 @@
+#actions
+	ul
+		li.color(data-color='rgba(255, 0, 0, 1.0)') &nbsp;
+		li.color(data-color='rgba(0, 255, 0, 1.0)') &nbsp;
+		li.color(data-color='rgba(0, 0, 255, 1.0)') &nbsp;
+	#current-color
+		span Selected Color:
+		span.color(data-color='rgba(255, 0, 0, 1.0)') &nbsp;
+	#current-line-width
+		span Line Width:
+		select(name='line-width')
+			for width in [1, 2, 3, 4, 5]
+				option #{width}
+	#drop-image-here Drop image here
+	button(name='clear') Clear
+#board
+	canvas(width=980, height=400, id='lower', class="border absolute")
+#chat
+	#messages
+	#login
+		span Username:
+		input(type='text', name='username')
+		input(type='button', name='login', value='Login')
+	#says
+		input(type='text', name='says')
+#status

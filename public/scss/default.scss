@@ -1,0 +1,133 @@
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin: 0px auto;
+	width: 980px;
+	margin-top: 10px;
+}
+
+a {
+	color: #00B7FF
+}
+
+.drag-hover {
+	background: #006600 !important;
+	color: #FFFFFF;
+}
+
+#actions {
+	@include clearfix;
+
+	ul {
+		li {
+			float: left;
+			margin-left: 10px;
+			width: 20px;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+
+			&.color {
+				border: 1px solid #000;
+			}
+		}
+	}
+
+	#current-color {
+		span {
+			float: left;
+			margin-left: 10px;
+
+			&.color {
+				width: 20px;
+				display: block;
+				border: 1px solid #000;
+			}
+		}
+	}
+
+	#current-line-width {
+		float: left;
+
+		span {
+			margin-left: 10px;
+		}
+
+		select {
+			margin-left: 10px;
+		}
+	}
+
+	#drop-image-here {
+		float: left;
+		margin-left: 10px;
+		padding: 2px 5px;
+		border: 1px dotted #cccccc;
+	}
+
+	button {
+		margin-left: 10px;
+	}
+}
+
+#board {
+	margin-top: 10px;
+	height: 400px;
+
+	canvas {
+		&.border { border: 1px solid red; }
+		//&.absolute { position:absolute; }
+	}
+}
+
+#chat {
+	margin-top: 10px;
+	width: 650px;
+	float: left;
+
+	#messages {
+		border: 1px solid #555555;
+		height: 150px;
+	}
+
+	#login {
+		border: 1px solid #555555;
+		margin-top: 5px;
+		padding: 5px;
+
+		input[name='username'], input[name='login'] {
+			border: 1px solid #000;
+		}
+
+		input[name='login'] {
+			padding: 1px;
+			background: none;
+		}
+	}
+
+	#says {
+		border: 1px solid #555555;
+		margin-top: 5px;
+		padding: 5px;
+		display: none;
+
+		input[name='says'] {
+			width: 99%;
+			border: 1px solid #000;
+		}
+	}
+}
+
+#status {
+	float: right;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	border: 1px solid #555555;
+	height: 180px;
+	width: 300px;
+	overflow: auto;
+}
